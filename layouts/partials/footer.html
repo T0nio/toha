@@ -115,6 +115,10 @@
                 <li><a href={{ printf "https://github.com/%s" $value }} target="_blank" rel="noopener">
                   <span><i class="fab fa-github"></i></span> <span>{{ $value }}</span>
                 </a></li>
+              {{ else if (eq $key "gitlab") }}
+                <li><a href={{ printf "https://gitlab.com/%s" $value }} target="_blank" rel="noopener">
+                  <span><i class="fab fa-gitlab"></i></span> <span>{{ $value }}</span>
+                </a></li>
               {{ else }}
                 <li><span>{{ title $key }}: </span> <span>{{ $value }}</span></li>
               {{ end }}
